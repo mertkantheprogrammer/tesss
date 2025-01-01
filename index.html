@@ -1,7 +1,19 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<body>
-Mertkan
-</body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faktöriyel Hesaplama</title>
 </head>
+<body>
+    <h1>Faktöriyel Hesaplama</h1>
+    <form method="POST" action="/factorial">
+        <label for="number">Bir sayı girin:</label>
+        <input type="number" id="number" name="number" required>
+        <button type="submit">Hesapla</button>
+    </form>
+    {% if result %}
+        <p style="color: {{ 'red' if error else 'green' }}">{{ result }}</p>
+    {% endif %}
+</body>
 </html>
